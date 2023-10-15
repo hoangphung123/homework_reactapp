@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import 'D:/reactapp/homework_reactapp/20110370/src/styles/home.css'
+import '../styles/home.css'
 
 const Home = ({ posts, deletePost }) => {
   const [localPosts, setLocalPosts] = useState([]);
