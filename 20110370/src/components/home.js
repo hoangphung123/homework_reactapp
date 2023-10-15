@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import 'D:/reactapp/20110370/src/styles/home.css'
 
 const Home = ({ posts, deletePost }) => {
   const [localPosts, setLocalPosts] = useState([]);
@@ -42,10 +43,15 @@ const Home = ({ posts, deletePost }) => {
       <ul>
         {localPosts.map((post) => (
           <li key={post.id}>
-            <Link to={`/edit/${post.id}`}>Edit</Link>
             {post.title}
-            <button onClick={() => handleDeletePost(post.id)}>Delete</button>
             <div>
+            <ul class="coment">
+              {comments[post.id] &&
+                comments[post.id].map((comment, index) => (
+                  <li key={index}>{comment}</li>
+                ))}
+            </ul>
+              <div class="comment">
               <input
                 type="text"
                 placeholder="Add a comment"
@@ -55,13 +61,11 @@ const Home = ({ posts, deletePost }) => {
               <button onClick={() => handleAddComment(post.id)}>
                 Add Comment
               </button>
+              </div>
+              <button to={`/edit/${post.id}`}>Edit</button>
+              <button class="delete" onClick={() => handleDeletePost(post.id)}>Delete</button>
             </div>
-            <ul>
-              {comments[post.id] &&
-                comments[post.id].map((comment, index) => (
-                  <li key={index}>{comment}</li>
-                ))}
-            </ul>
+            
           </li>
         ))}
       </ul>

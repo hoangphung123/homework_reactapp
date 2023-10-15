@@ -23,6 +23,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    margin-left: 0px;
     padding: 20px;
     list-style: none;
   }
@@ -41,48 +42,50 @@ body {
   
   /* Nút "Delete" */
   button {
-    background-color: #fff;
+    background-color: #3c8bf3;
     border: none;
-    color: #1877f2;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
     font-weight: bold;
   }
   
+  div.comment{
+    position: relative;
+    padding-right: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   /* Phần Comment */
   input[type="text"] {
-    width: 100%;
+    width: 70%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 10px;
   }
+
   
-  button.comment-button {
-    background-color: #1877f2;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px 15px;
-    margin-left: 10px;
+  button:hover {
+    background-color: #3c82eb;
   }
-  
-  button.comment-button:hover {
-    background-color: #1357c0;
-  }
-  
-  ul.comments {
-    list-style: none;
-    margin-top: 10px;
-    padding: 0;
-  }
-  
-  ul.comments li {
-    background-color: #f0f2f5;
-    border: 1px solid #ddd;
+
+  button.delete{
+    position: relative;
+    left: 81%;
+    background-color: red;
+    color: white;
     border-radius: 5px;
-    padding: 10px;
-    margin: 5px 0;
+  }
+
+  button.delete:hover{
+    background-color: rgb(201, 77, 77);
+  }
+  
+  ul.coment{
+    padding: 0px;
   }
   
   /* Nút "Create New Post" và link "Back to Home" */
