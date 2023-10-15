@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import 'D:/reactapp/20110370/src/styles/create.css'
+import 'D:/reactapp/homework_reactapp/20110370/src/styles/create.css'
 const Create = ({ createPost }) => {
   const [title, setTitle] = useState('');
   const navigate = useNavigate(); // Sử dụng hook useNavigate

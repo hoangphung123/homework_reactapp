@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import 'D:/reactapp/20110370/src/styles/home.css'
+import 'D:/reactapp/homework_reactapp/20110370/src/styles/home.css'
 
 const Home = ({ posts, deletePost }) => {
   const [localPosts, setLocalPosts] = useState([]);
@@ -62,7 +62,7 @@ const Home = ({ posts, deletePost }) => {
                 Add Comment
               </button>
               </div>
-              <button to={`/edit/${post.id}`}>Edit</button>
+              <Link to={`/edit/${post.id}`}>Edit</Link>
               <button class="delete" onClick={() => handleDeletePost(post.id)}>Delete</button>
             </div>
             
